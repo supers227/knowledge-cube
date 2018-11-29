@@ -335,6 +335,8 @@ w，h是宽高
 感觉咋样，能不能听懂 可以的  
 
 你运行吧
+float t = PI;//定义一个单精度浮点变量t，并且初始化，初始值为PI
+int times = 0;
 void setup(){
    size(800,800);
    noStroke();
@@ -346,13 +348,13 @@ void draw(){
    fill(50 * sin(t),(mouseX < width/2) ? 300 : 50);
    rect(0,0,width,height);
    int s;
-   switch(times % 3){
+   switch(times % 3){//相当于开关
      default : s = 3;break;
      case 1 : s = 4;break;
      case 2 : s = 5;break;
    }
    if(s == 5) s = -s;
-   translate(width/2,height/2);
+   translate(width/2,height/2);//改变坐标原点
    fill(200+10*cos(t));
    rotate(2*t/s);
    float[] args = {abs(s),abs(s)/sin(t),mouseX/50.0,mouseX/50.0};

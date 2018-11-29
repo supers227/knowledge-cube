@@ -78,12 +78,53 @@ void setup(){
   dang(6,7,20);
 }
 void dang(int x, int y, int d){//xyd分别是行数列数和距四边边距
-float rectW = width / x- 2 * d / x; //计算x方向的格子宽
-float rectH = height / y-2 * d / y;//计算y方向的格子高
+  float rectW = width / x- 2 * d / x; //计算x方向的格子宽
+  float rectH = height / y-2 * d / y;//计算y方向的格子高
   for(int i = d; i <=  width - d; i += rectW){
     for(int j = d; j <=  height - d; j += rectH){
-    rect(i,j,rectW,rectH);
+      rect(i,j,rectW,rectH);
   }
  }
 }
 ```
+
+### 第二种循环：while
+
+while(条件）{
+执行的操作
+}
+
+注意：这里的条件和for的条件不大相同
+for 的条件只是自增最后停止的条件，
+这里的条件可以不只是自增，可以是一个布尔值
+当布尔值为True的时候，执行while里的代码
+
+这里我演示一个用while的for循环实现
+这一行初始变量值
+这一行条件
+自增及操作
+一般来讲，for循环就够用了
+
+下面利用 draw的循环实现for循环
+
+draw是死循环，加到100之后，还会打印t值，只不过t值一直是100
+
+for也能做出死循环，
+这就很快了，瞬间四位数
+
+这都不是重点，重点是理解怎么做循环就行
+
+下一步，逻辑运算与条件判断
+
+if(tiaojian).......else..............
+翻译成中文就是如果怎样就干什么什么，否则干什么什么
+
+|| 或
+
+&& 且
+
+！ 非
+
+请问现在a && b 为真还是假 ?jia
+
+bingo
